@@ -10,3 +10,7 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
 })
+
+vim.api.nvim_set_keymap('n', '<leader>t', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>f', ':NvimTreeFocus<CR>', { noremap = true, silent = true })
+
