@@ -84,16 +84,6 @@ _G.packer_plugins = {
     path = "/Users/k387899/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
   },
-  ["cellular-automaton.nvim"] = {
-    loaded = true,
-    path = "/Users/k387899/.local/share/nvim/site/pack/packer/start/cellular-automaton.nvim",
-    url = "https://github.com/eandrju/cellular-automaton.nvim"
-  },
-  ["cloak.nvim"] = {
-    loaded = true,
-    path = "/Users/k387899/.local/share/nvim/site/pack/packer/start/cloak.nvim",
-    url = "https://github.com/laytan/cloak.nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/k387899/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -118,11 +108,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/k387899/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
-  },
-  ["copilot.vim"] = {
-    loaded = true,
-    path = "/Users/k387899/.local/share/nvim/site/pack/packer/start/copilot.vim",
-    url = "https://github.com/github/copilot.vim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -206,7 +191,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   treesj = {
-    config = { "\27LJ\2\n \1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\6\24use_default_keymaps\2\vnotify\2\15dot_repeat\2\20cursor_behavior\thold\20max_join_length\3à\18\23check_syntax_error\2\nsetup\vtreesj\frequire\0" },
+    config = { "\27LJ\2\n \1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\6\vnotify\2\15dot_repeat\2\20cursor_behavior\thold\20max_join_length\3à\18\23check_syntax_error\2\24use_default_keymaps\2\nsetup\vtreesj\frequire\0" },
     loaded = true,
     path = "/Users/k387899/.local/share/nvim/site/pack/packer/start/treesj",
     url = "https://github.com/Wansmer/treesj"
@@ -230,18 +215,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/k387899/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
-  },
-  ["zen-mode.nvim"] = {
-    loaded = true,
-    path = "/Users/k387899/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
-    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
 -- Config for: treesj
 time([[Config for treesj]], true)
-try_loadstring("\27LJ\2\n \1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\6\24use_default_keymaps\2\vnotify\2\15dot_repeat\2\20cursor_behavior\thold\20max_join_length\3à\18\23check_syntax_error\2\nsetup\vtreesj\frequire\0", "config", "treesj")
+try_loadstring("\27LJ\2\n \1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\6\vnotify\2\15dot_repeat\2\20cursor_behavior\thold\20max_join_length\3à\18\23check_syntax_error\2\24use_default_keymaps\2\nsetup\vtreesj\frequire\0", "config", "treesj")
 time([[Config for treesj]], false)
 -- Config for: nvim-surround
 time([[Config for nvim-surround]], true)
