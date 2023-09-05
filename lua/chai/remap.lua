@@ -33,7 +33,12 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz", {desc = "Navigate Down on Compi
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz", {desc = "Navigate Up on Location List(Diagnostics)"})
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz", {desc = "Navigate Down on Location List(Diagnostics)"})
 
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {desc = "Search and Replace selected word in a file"})
+vim.keymap.set(
+  "n",
+  "<leader>sr",
+  [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+  {desc = "Search and Replace selected word in a file"}
+)
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true }, {desc = "Chmod +x"})
 
 vim.keymap.set("n", "<leader><leader>", function()
