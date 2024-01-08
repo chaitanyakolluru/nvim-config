@@ -15,7 +15,8 @@ return require('packer').startup(function(use)
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
   -- use { "catppuccin/nvim", as = "catppuccin" }
-  use "EdenEast/nightfox.nvim" -- Packer
+  -- use "EdenEast/nightfox.nvim" -- Packer
+  use "rebelot/kanagawa.nvim"
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use('nvim-treesitter/playground')
