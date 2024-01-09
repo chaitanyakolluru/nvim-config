@@ -136,4 +136,23 @@ use {
   end
 }
 
+-- adding vim-helm as it a dependency for helm-ls
+use 'towolf/vim-helm'
+
+local lspconfig = require('lspconfig')
+
+-- setup helm-ls
+lspconfig.helm_ls.setup {
+  settings = {
+    ['helm-ls'] = {
+      yamlls = {
+        path = "yaml-language-server",
+      }
+    }
+  }
+}
+
+-- setup yamlls
+lspconfig.yamlls.setup {}
+
 end)
