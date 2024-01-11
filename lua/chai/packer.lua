@@ -155,4 +155,7 @@ lspconfig.helm_ls.setup {
 -- setup yamlls
 lspconfig.yamlls.setup {}
 
+--diff-view tool
+use "sindrets/diffview.nvim"
+
 end)
