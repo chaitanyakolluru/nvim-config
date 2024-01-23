@@ -44,3 +44,10 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true }, {des
 vim.keymap.set("n", "<leader><leader>", function()
   vim.cmd("so")
 end, {desc = "Shout Out"})
+
+-- to set if err nil thingy in Go
+vim.keymap.set(
+  "n",
+  "<leader>ee",
+  "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
+)
