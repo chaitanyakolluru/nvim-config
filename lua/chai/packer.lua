@@ -158,4 +158,7 @@ lspconfig.yamlls.setup {}
 --diff-view tool
 use "sindrets/diffview.nvim"
 
+
+---copilot
+use "github/copilot.vim"
 end)
