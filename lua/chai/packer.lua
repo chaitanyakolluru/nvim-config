@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
   -- use { "catppuccin/nvim", as = "catppuccin" }
   -- use "EdenEast/nightfox.nvim" -- Packer
   use "rebelot/kanagawa.nvim"
+  use "sainnhe/everforest"
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use('nvim-treesitter/playground')

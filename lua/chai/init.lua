@@ -3,4 +3,6 @@ require("chai.set")
 require("chai.packer")
 
 -- setting default colorscheme
-vim.cmd.colorscheme "kanagawa"
+vim.g.everforest_background = "hard"
+
+vim.cmd.colorscheme "everforest"
