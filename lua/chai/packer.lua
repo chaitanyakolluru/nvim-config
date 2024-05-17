@@ -162,4 +162,13 @@ use "sindrets/diffview.nvim"
 
 ---copilot
 use "github/copilot.vim"
+
+---oil
+use({
+    "stevearc/oil.nvim",
+    config = function()
+      require("oil").setup()
+    end,
+})
+
 end)
