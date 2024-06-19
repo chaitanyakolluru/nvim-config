@@ -171,4 +171,12 @@ use({
     end,
 })
 
+---wrapping
+--=https://github.com/andrewferrier/wrapping.nvim
+use({
+    "andrewferrier/wrapping.nvim",
+    config = function()
+        require("wrapping").setup()
+    end,
+})
 end)
