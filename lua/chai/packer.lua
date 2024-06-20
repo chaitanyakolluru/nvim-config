@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
   use 'BurntSushi/ripgrep'
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
+  --  :colorscheme -- themes
   -- use { "catppuccin/nvim", as = "catppuccin" }
   -- use "EdenEast/nightfox.nvim" -- Packer
   use "rebelot/kanagawa.nvim"
@@ -50,7 +51,6 @@ return require('packer').startup(function(use)
 
   use("christoomey/vim-tmux-navigator")
 
-  -- install without yarn or npm
   use({
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
