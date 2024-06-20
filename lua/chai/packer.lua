@@ -7,7 +7,7 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.2',
+    'nvim-telescope/telescope.nvim', tag = '0.1.8',
     -- or                            , branch = '0.1.x',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
@@ -104,7 +104,7 @@ return require('packer').startup(function(use)
   })
 
   use({
-  "jackMort/ChatGPT.nvim",
+    "jackMort/ChatGPT.nvim",
     config = function()
       require("chatgpt").setup()
     end,
@@ -113,54 +113,53 @@ return require('packer').startup(function(use)
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim"
     }
-})
+  })
 
--- Lua
-use {
-  "folke/which-key.nvim",
-  config = function()
-    vim.o.timeout = true
-    vim.o.timeoutlen = 300
-    require("which-key").setup {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
-  end
-}
+  -- Lua
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+      require("which-key").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
 
--- adding vim-helm as it a dependency for helm-ls
-use 'towolf/vim-helm'
+  -- adding vim-helm as it a dependency for helm-ls
+  use 'towolf/vim-helm'
 
-local lspconfig = require('lspconfig')
+  local lspconfig = require('lspconfig')
 
--- setup helm-ls
-lspconfig.helm_ls.setup {
-  settings = {
-    ['helm-ls'] = {
-      yamlls = {
-        path = "yaml-language-server",
+  -- setup helm-ls
+  lspconfig.helm_ls.setup {
+    settings = {
+      ['helm-ls'] = {
+        yamlls = {
+          path = "yaml-language-server",
+        }
       }
     }
   }
-}
 
--- setup yamlls
-lspconfig.yamlls.setup {}
+  -- setup yamlls
+  lspconfig.yamlls.setup {}
 
---diff-view tool
-use "sindrets/diffview.nvim"
+  --diff-view tool
+  use "sindrets/diffview.nvim"
 
 
----copilot
-use "github/copilot.vim"
+  ---copilot
+  use "github/copilot.vim"
 
----oil
-use({
+  ---oil
+  use({
     "stevearc/oil.nvim",
     config = function()
       require("oil").setup()
     end,
-})
-
+  })
 end)
