@@ -159,7 +159,21 @@ return require('packer').startup(function(use)
   use({
     "stevearc/oil.nvim",
     config = function()
-      require("oil").setup()
+      require("oil").setup({
+        default_file_explorer = true,
+        win_options = {
+          wrap = true,
+        },
+        delete_to_trash = true,
+        skip_confirm_for_simple_edits = true,
+        view_options = {
+          show_hidden = true,
+          is_always_hidden = function(name, _)
+            return name == '..' or name == '.git'
+          end,
+          natural_order = false,
+        },
+      })
     end,
   })
 end)
