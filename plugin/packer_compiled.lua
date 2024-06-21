@@ -197,7 +197,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["oil.nvim"] = {
-    config = { "\27LJ\2\n/\0\2\3\0\2\0\b\6\0\0\0X\2\4Ä\6\0\1\0X\2\2Ä+\2\1\0X\3\1Ä+\2\2\0L\2\2\0\t.git\a..ó\2\1\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0003\4\a\0=\4\b\3=\3\t\2B\0\2\1K\0\1\0\17view_options\21is_always_hidden\0\1\0\3\16show_hidden\2\18natural_order\1\21is_always_hidden\0\16win_options\1\0\1\twrap\2\1\0\5\16win_options\0\26default_file_explorer\2\17view_options\0\"skip_confirm_for_simple_edits\2\20delete_to_trash\2\nsetup\boil\frequire\0" },
+    config = { "\27LJ\2\n/\0\2\3\0\2\0\b\6\0\0\0X\2\4Ä\6\0\1\0X\2\2Ä+\2\1\0X\3\1Ä+\2\2\0L\2\2\0\t.git\a..›\a\1\0\6\0\25\0\0316\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0003\4\a\0=\4\b\3=\3\t\0025\3\n\0005\4\v\0005\5\f\0=\5\r\4=\4\14\0035\4\15\0005\5\16\0=\5\r\4=\4\17\0035\4\18\0005\5\19\0=\5\r\4=\4\20\0035\4\21\0005\5\22\0=\5\r\4=\4\23\3=\3\24\2B\0\2\1K\0\1\0\fkeymaps\6~\1\0\1\nscope\btab\1\2\2\0\15actions.cd\topts\0\tdesc&:tcd to the current oil directory\n<C-t>\1\0\1\btab\2\1\2\2\0\19actions.select\topts\0\tdesc\30Open the entry in new tab\n<C-h>\1\0\1\15horizontal\2\1\2\2\0\19actions.select\topts\0\tdesc)Open the entry in a horizontal split\n<C-s>\topts\1\0\1\rvertical\2\1\2\2\0\19actions.select\topts\0\tdesc'Open the entry in a vertical split\1\0\16\n<C-c>\18actions.close\ag\\\25actions.toggle_trash\n<C-p>\20actions.preview\ag.\26actions.toggle_hidden\n<C-t>\0\agx\26actions.open_external\6~\0\n<C-h>\0\ags\24actions.change_sort\6_\21actions.open_cwd\n<C-s>\0\6`\15actions.cd\t<CR>\19actions.select\6-\19actions.parent\ag?\22actions.show_help\n<C-r>\20actions.refresh\17view_options\21is_always_hidden\0\1\0\3\18natural_order\1\21is_always_hidden\0\16show_hidden\2\16win_options\1\0\1\twrap\2\1\0\a\26default_file_explorer\2\fkeymaps\0\24use_default_keymaps\1\17view_options\0\"skip_confirm_for_simple_edits\2\20delete_to_trash\2\16win_options\0\nsetup\boil\frequire\0" },
     loaded = true,
     path = "/Users/k387899/.local/share/nvim/site/pack/packer/start/oil.nvim",
     url = "https://github.com/stevearc/oil.nvim"
@@ -267,26 +267,26 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\nt\0\0\3\0\a\0\0156\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
--- Config for: nvim-surround
-time([[Config for nvim-surround]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
-time([[Config for nvim-surround]], false)
--- Config for: oil.nvim
-time([[Config for oil.nvim]], true)
-try_loadstring("\27LJ\2\n/\0\2\3\0\2\0\b\6\0\0\0X\2\4Ä\6\0\1\0X\2\2Ä+\2\1\0X\3\1Ä+\2\2\0L\2\2\0\t.git\a..ó\2\1\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0003\4\a\0=\4\b\3=\3\t\2B\0\2\1K\0\1\0\17view_options\21is_always_hidden\0\1\0\3\16show_hidden\2\18natural_order\1\21is_always_hidden\0\16win_options\1\0\1\twrap\2\1\0\5\16win_options\0\26default_file_explorer\2\17view_options\0\"skip_confirm_for_simple_edits\2\20delete_to_trash\2\nsetup\boil\frequire\0", "config", "oil.nvim")
-time([[Config for oil.nvim]], false)
--- Config for: ChatGPT.nvim
-time([[Config for ChatGPT.nvim]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fchatgpt\frequire\0", "config", "ChatGPT.nvim")
-time([[Config for ChatGPT.nvim]], false)
 -- Config for: treesj
 time([[Config for treesj]], true)
 try_loadstring("\27LJ\2\nÆ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\a\ron_error\0\15dot_repeat\2\vnotify\2\20cursor_behavior\thold\20max_join_length\4\0£√áè\4\23check_syntax_error\2\24use_default_keymaps\2\nsetup\vtreesj\frequire\0", "config", "treesj")
 time([[Config for treesj]], false)
+-- Config for: oil.nvim
+time([[Config for oil.nvim]], true)
+try_loadstring("\27LJ\2\n/\0\2\3\0\2\0\b\6\0\0\0X\2\4Ä\6\0\1\0X\2\2Ä+\2\1\0X\3\1Ä+\2\2\0L\2\2\0\t.git\a..›\a\1\0\6\0\25\0\0316\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0003\4\a\0=\4\b\3=\3\t\0025\3\n\0005\4\v\0005\5\f\0=\5\r\4=\4\14\0035\4\15\0005\5\16\0=\5\r\4=\4\17\0035\4\18\0005\5\19\0=\5\r\4=\4\20\0035\4\21\0005\5\22\0=\5\r\4=\4\23\3=\3\24\2B\0\2\1K\0\1\0\fkeymaps\6~\1\0\1\nscope\btab\1\2\2\0\15actions.cd\topts\0\tdesc&:tcd to the current oil directory\n<C-t>\1\0\1\btab\2\1\2\2\0\19actions.select\topts\0\tdesc\30Open the entry in new tab\n<C-h>\1\0\1\15horizontal\2\1\2\2\0\19actions.select\topts\0\tdesc)Open the entry in a horizontal split\n<C-s>\topts\1\0\1\rvertical\2\1\2\2\0\19actions.select\topts\0\tdesc'Open the entry in a vertical split\1\0\16\n<C-c>\18actions.close\ag\\\25actions.toggle_trash\n<C-p>\20actions.preview\ag.\26actions.toggle_hidden\n<C-t>\0\agx\26actions.open_external\6~\0\n<C-h>\0\ags\24actions.change_sort\6_\21actions.open_cwd\n<C-s>\0\6`\15actions.cd\t<CR>\19actions.select\6-\19actions.parent\ag?\22actions.show_help\n<C-r>\20actions.refresh\17view_options\21is_always_hidden\0\1\0\3\18natural_order\1\21is_always_hidden\0\16show_hidden\2\16win_options\1\0\1\twrap\2\1\0\a\26default_file_explorer\2\fkeymaps\0\24use_default_keymaps\1\17view_options\0\"skip_confirm_for_simple_edits\2\20delete_to_trash\2\16win_options\0\nsetup\boil\frequire\0", "config", "oil.nvim")
+time([[Config for oil.nvim]], false)
+-- Config for: nvim-surround
+time([[Config for nvim-surround]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
+time([[Config for nvim-surround]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\2\nt\0\0\3\0\a\0\0156\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
+-- Config for: ChatGPT.nvim
+time([[Config for ChatGPT.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fchatgpt\frequire\0", "config", "ChatGPT.nvim")
+time([[Config for ChatGPT.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
