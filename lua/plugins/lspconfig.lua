@@ -54,6 +54,12 @@ function Plugin.config()
     callback = user.on_attach
   })
 
+  vim.api.nvim_create_autocmd('BufWritePre', {
+    group = vim.api.nvim_create_augroup('Format', {clear = true}),
+    desc = 'Format on save',
+    callback = function() vim.lsp.buf.format({}) end
+  })
+
   -- See :help mason-lspconfig-settings
   require('mason-lspconfig').setup({
     handlers = {
