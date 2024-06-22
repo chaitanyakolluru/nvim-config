@@ -1,16 +1,15 @@
-
-local Plugin = {'neovim/nvim-lspconfig'}
+local Plugin = { 'neovim/nvim-lspconfig' }
 local user = {}
 
-Plugin.dependencies =  {
-  {'hrsh7th/cmp-nvim-lsp'},
-  {'williamboman/mason.nvim'},
-  {'williamboman/mason-lspconfig.nvim'},
+Plugin.dependencies = {
+  { 'hrsh7th/cmp-nvim-lsp' },
+  { 'williamboman/mason.nvim' },
+  { 'williamboman/mason-lspconfig.nvim' },
 }
 
-Plugin.cmd = {'LspInfo', 'LspInstall', 'LspUnInstall'}
+Plugin.cmd = { 'LspInfo', 'LspInstall', 'LspUnInstall' }
 
-Plugin.event = {'BufReadPre', 'BufNewFile'}
+Plugin.event = { 'BufReadPre', 'BufNewFile' }
 
 function Plugin.init()
   -- See :help vim.diagnostic.config()
@@ -33,12 +32,12 @@ function Plugin.init()
 
   vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
     vim.lsp.handlers.hover,
-    {border = 'rounded'}
+    { border = 'rounded' }
   )
 
   vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
     vim.lsp.handlers.signature_help,
-    {border = 'rounded'}
+    { border = 'rounded' }
   )
 end
 
@@ -46,7 +45,7 @@ function Plugin.config()
   local lspconfig = require('lspconfig')
   local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-  local group = vim.api.nvim_create_augroup('lsp_cmds', {clear = true})
+  local group = vim.api.nvim_create_augroup('lsp_cmds', { clear = true })
 
   vim.api.nvim_create_autocmd('LspAttach', {
     group = group,
@@ -54,11 +53,30 @@ function Plugin.config()
     callback = user.on_attach
   })
 
-  vim.api.nvim_create_autocmd('BufWritePre', {
-    group = vim.api.nvim_create_augroup('Format', {clear = true}),
-    desc = 'Format on save',
-    callback = function() vim.lsp.buf.format({}) end
+  -- Automatically organize imports on save
+  vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*.go",
+    callback = function()
+      local params = vim.lsp.util.make_range_params()
+      params.context = { only = { "source.organizeImports" } }
+      -- buf_request_sync defaults to a 1000ms timeout. Depending on your
+      -- machine and codebase, you may want longer. Add an additional
+      -- argument after params if you find that you have to write the file
+      -- twice for changes to be saved.
+      -- E.g., vim.lsp.buf_request_sync(0, "textDocument/codeAction", params, 3000)
+      local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params)
+      for cid, res in pairs(result or {}) do
+        for _, r in pairs(res.result or {}) do
+          if r.edit then
+            local enc = (vim.lsp.get_client_by_id(cid) or {}).offset_encoding or "utf-16"
+            vim.lsp.util.apply_workspace_edit(r.edit, enc)
+          end
+        end
+      end
+      vim.lsp.buf.format({ async = false })
+    end
   })
+
 
   -- See :help mason-lspconfig-settings
   require('mason-lspconfig').setup({
@@ -74,6 +92,9 @@ function Plugin.config()
         -- if you install the language server for lua it will
         -- load the config from lua/plugins/lsp/lua_ls.lua
         require('plugins.lsp.lua_ls')
+      end,
+      ['gopls'] = function()
+        require('plugins.lsp.gopls')
       end
     }
   })
@@ -81,7 +102,7 @@ end
 
 function user.on_attach(event)
   local bufmap = function(mode, lhs, rhs, desc)
-    local opts = {buffer = event.buf, desc = desc}
+    local opts = { buffer = event.buf, desc = desc }
     vim.keymap.set(mode, lhs, rhs, opts)
   end
 
@@ -96,7 +117,7 @@ function user.on_attach(event)
   bufmap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', 'Go to reference')
   bufmap('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', 'Show function signature')
   bufmap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', 'Rename symbol')
-  bufmap({'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', 'Format buffer')
+  bufmap({ 'n', 'x' }, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', 'Format buffer')
   bufmap('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', 'Execute code action')
   bufmap('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>', 'Show line diagnostic')
   bufmap('n', ']d', '<cmd>lua vim.diagnostic.goto_prev()<cr>', 'Previous diagnostic')
@@ -104,4 +125,3 @@ function user.on_attach(event)
 end
 
 return Plugin
-
