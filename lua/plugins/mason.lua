@@ -1,22 +1,23 @@
-local Plugin = {'williamboman/mason.nvim'}
+local Plugin = { 'williamboman/mason.nvim' }
 
-Plugin.lazy = false
+Plugin.lazy = true
 
 Plugin.dependencies = {
-      { 'williamboman/mason-lspconfig.nvim' },
+  { 'williamboman/mason-lspconfig.nvim' },
 }
 
+Plugin.event = { 'BufReadPre', 'BufNewFile' }
 
 function Plugin.config()
-require("mason").setup({
+  require("mason").setup({
     ui = {
-        icons = {
-            package_installed = "✓",
-            package_pending = "➜",
-            package_uninstalled = "✗"
-        }
+      icons = {
+        package_installed = "✓",
+        package_pending = "➜",
+        package_uninstalled = "✗"
+      }
     }
-})
+  })
 end
 
 return Plugin

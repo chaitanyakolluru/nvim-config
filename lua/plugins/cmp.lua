@@ -1,4 +1,8 @@
-local Plugin = {'hrsh7th/nvim-cmp'}
+local Plugin = { 'hrsh7th/nvim-cmp' }
+
+Plugin.lazy = true
+
+Plugin.event = { 'InsertEnter' }
 
 Plugin.dependencies = {
   -- LSP Support
@@ -17,8 +21,8 @@ Plugin.dependencies = {
   { 'rafamadriz/friendly-snippets' },
 
   -- Snippets
-  {'L3MON4D3/LuaSnip'},
-  {'rafamadriz/friendly-snippets'},
+  { 'L3MON4D3/LuaSnip' },
+  { 'rafamadriz/friendly-snippets' },
 }
 
 
@@ -28,7 +32,7 @@ function Plugin.config()
 
   require('luasnip.loaders.from_vscode').lazy_load()
 
-  local select_opts = {behavior = cmp.SelectBehavior.Select}
+  local select_opts = { behavior = cmp.SelectBehavior.Select }
 
   -- See :help cmp-config
   cmp.setup({
@@ -38,10 +42,10 @@ function Plugin.config()
       end
     },
     sources = {
-      {name = 'path'},
-      {name = 'nvim_lsp'},
-      {name = 'buffer', keyword_length = 3},
-      {name = 'luasnip', keyword_length = 2},
+      { name = 'path' },
+      { name = 'nvim_lsp' },
+      { name = 'buffer',  keyword_length = 3 },
+      { name = 'luasnip', keyword_length = 2 },
     },
     window = {
       completion = cmp.config.window.bordered(),
@@ -59,8 +63,8 @@ function Plugin.config()
       ['<C-d>'] = cmp.mapping.scroll_docs(4),
 
       ['<C-e>'] = cmp.mapping.abort(),
-      ['<C-y>'] = cmp.mapping.confirm({select = true}),
-      ['<CR>'] = cmp.mapping.confirm({select = false}),
+      ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+      ['<CR>'] = cmp.mapping.confirm({ select = false }),
 
       ['<C-f>'] = cmp.mapping(function(fallback)
         if luasnip.jumpable(1) then
@@ -68,7 +72,7 @@ function Plugin.config()
         else
           fallback()
         end
-      end, {'i', 's'}),
+      end, { 'i', 's' }),
 
       ['<C-b>'] = cmp.mapping(function(fallback)
         if luasnip.jumpable(-1) then
@@ -76,7 +80,7 @@ function Plugin.config()
         else
           fallback()
         end
-      end, {'i', 's'}),
+      end, { 'i', 's' }),
 
       ['<Tab>'] = cmp.mapping(function(fallback)
         local col = vim.fn.col('.') - 1
@@ -88,7 +92,7 @@ function Plugin.config()
         else
           cmp.complete()
         end
-      end, {'i', 's'}),
+      end, { 'i', 's' }),
 
       ['<S-Tab>'] = cmp.mapping.select_prev_item(select_opts),
     },
@@ -96,4 +100,3 @@ function Plugin.config()
 end
 
 return Plugin
-

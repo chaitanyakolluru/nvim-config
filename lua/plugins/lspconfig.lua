@@ -1,6 +1,8 @@
 local Plugin = { 'neovim/nvim-lspconfig' }
 local user = {}
 
+Plugin.lazy = true
+
 Plugin.dependencies = {
   { 'hrsh7th/cmp-nvim-lsp' },
   { 'williamboman/mason.nvim' },
@@ -100,6 +102,7 @@ function Plugin.config()
   })
 end
 
+--- setting up keymaps for lsp
 function user.on_attach(event)
   local bufmap = function(mode, lhs, rhs, desc)
     local opts = { buffer = event.buf, desc = desc }
