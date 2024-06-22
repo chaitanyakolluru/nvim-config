@@ -2,6 +2,12 @@ local Plugin = { 'nvim-treesitter/nvim-treesitter' }
 
 Plugin.dependencies = { 'nvim-treesitter/playground' }
 
+Plugin.build = ':TSUpdate'
+
+Plugin.lazy = true
+
+Plugin.event = { 'BufReadPre', 'BufNewFile' }
+
 function Plugin.config()
   require 'nvim-treesitter.configs'.setup {
     ensure_installed = {
