@@ -6,7 +6,9 @@ Plugin.build = ':TSUpdate'
 
 Plugin.lazy = true
 
-Plugin.event = { 'BufReadPre', 'BufNewFile' }
+-- This is a list of filetypes that will be used to determine if the plugin should be loaded.
+Plugin.ft = { "go", "json", "yaml", "protofuf", "lua", "helm", "markdown", "python", "rust", "text", "docker", "html",
+  "terraform", "typescript" }
 
 function Plugin.config()
   require 'nvim-treesitter.configs'.setup {

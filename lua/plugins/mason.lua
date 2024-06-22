@@ -2,11 +2,11 @@ local Plugin = { 'williamboman/mason.nvim' }
 
 Plugin.lazy = true
 
+Plugin.cmd = { 'Mason', 'MasonUpdate', 'MasonInstall', 'MasonUnInstall' }
+
 Plugin.dependencies = {
   { 'williamboman/mason-lspconfig.nvim' },
 }
-
-Plugin.event = { 'BufReadPre', 'BufNewFile' }
 
 function Plugin.config()
   require("mason").setup({
