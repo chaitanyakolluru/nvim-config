@@ -17,3 +17,8 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 
+-- default settings for colorscheme
+vim.o.background = "dark"
+vim.g.everforest_background = "hard"
+
+vim.g.mapleader = " "

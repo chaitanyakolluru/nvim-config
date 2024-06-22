@@ -1,5 +1,3 @@
-vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "[P]roject [V]iew" })
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Shift visual block Down" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "shift visual block Up" })
@@ -38,3 +36,4 @@ vim.keymap.set(
   "<leader>ee",
   "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
 )
+
