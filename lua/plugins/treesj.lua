@@ -1,5 +1,7 @@
 local Plugin = { 'Wansmer/treesj' }
 
+Plugin.lazy = true
+
 Plugin.dependencies = { 'nvim-treesitter/nvim-treesitter' }
 
 function Plugin.config()
