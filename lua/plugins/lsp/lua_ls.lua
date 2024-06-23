@@ -18,7 +18,7 @@ lspconfig.lua_ls.setup({
     local path = client.workspace_folders[1].name
 
     -- Don't do anything if there is project local config
-    if vim.uv.fs_stat(join(path, '.luarc.json')) 
+    if vim.uv.fs_stat(join(path, '.luarc.json'))
       or vim.uv.fs_stat(join(path, '.luarc.jsonc'))
     then
       return
