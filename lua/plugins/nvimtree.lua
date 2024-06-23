@@ -12,19 +12,17 @@ Plugin.keys = {
   { '<leader>f', ':NvimTreeFocus<CR>',  desc = "NvimTree - Focus" },
 }
 
-function Plugin.config()
-  require("nvim-tree").setup({
-    sort_by = "case_sensitive",
-    view = {
-      width = 30,
-    },
-    renderer = {
-      group_empty = true,
-    },
-    filters = {
-      dotfiles = true,
-    },
-  })
-end
+Plugin.opts = {
+  sort_by = "case_sensitive",
+  view = {
+    width = 30,
+  },
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+}
 
 return Plugin
