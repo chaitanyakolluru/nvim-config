@@ -1,7 +1,5 @@
 local Plugin = { 'williamboman/mason.nvim' }
 
-Plugin.lazy = true
-
 Plugin.cmd = { 'Mason', 'MasonUpdate', 'MasonInstall', 'MasonUnInstall' }
 
 Plugin.dependencies = {

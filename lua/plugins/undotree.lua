@@ -1,8 +1,10 @@
 local Plugin = { 'mbbill/undotree' }
 
-function Plugin.config()
-  vim.keymap.set("n", "<leader>uu", vim.cmd.UndotreeToggle, { desc = "UndoTree Toggle" })
-  vim.keymap.set("n", "<leader>uf", vim.cmd.UndotreeFocus, { desc = "UndoTree Focus" })
-end
+Plugin.keys = {
+  { '<leader>uu', ':UndotreeToggle<CR>', desc = "UndoTree Toggle" },
+  { '<leader>uf', ':UndotreeFocus<CR>',  desc = "UndoTree Focus" },
+}
+
+Plugin.config = true
 
 return Plugin

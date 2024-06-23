@@ -1,8 +1,5 @@
 local Plugin = { 'nvim-tree/nvim-tree.lua' }
 
-Plugin.lazy = true
-
-
 Plugin.dependencies = {
   { 'nvim-tree/nvim-web-devicons' },
 }

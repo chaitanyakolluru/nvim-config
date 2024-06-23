@@ -1,8 +1,6 @@
 local Plugin = { 'neovim/nvim-lspconfig' }
 local user = {}
 
-Plugin.lazy = true
-
 Plugin.dependencies = {
   { 'hrsh7th/cmp-nvim-lsp' },
   { 'williamboman/mason.nvim' },
@@ -10,9 +8,6 @@ Plugin.dependencies = {
 }
 
 Plugin.cmd = { 'LspInfo', 'LspInstall', 'LspUnInstall' }
-
--- commenting this as with oil it loads everytime
--- Plugin.event = { 'BufReadPre', 'BufNewFile' }
 
 -- This is a list of filetypes that will be used to determine if the plugin should be loaded.
 Plugin.ft = { "go", "json", "yaml", "protofuf", "lua", "helm", "markdown", "python", "rust", "text", "docker", "html",

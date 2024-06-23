@@ -1,9 +1,7 @@
 local Plugin = { 'hrsh7th/nvim-cmp' }
 
-Plugin.lazy = true
 
-Plugin.ft = { "go", "json", "yaml", "protofuf", "lua", "helm", "markdown", "python", "rust", "text", "docker", "html",
-  "terraform", "typescript" }
+Plugin.event = "InsertEnter"
 
 Plugin.dependencies = {
   -- LSP Support
