@@ -9,7 +9,7 @@ Plugin.lazy = false
 Plugin.priority = 1000
 
 function Plugin.config()
-  vim.cmd([[colorscheme tokyonight-storm]])
+  vim.cmd([[colorscheme tokyonight-night]])
 end
 
 return Plugin
