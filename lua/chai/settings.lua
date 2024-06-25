@@ -18,8 +18,8 @@ vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 
 -- default settings for colorscheme
-vim.o.background = "dark"
-vim.g.gruvbox_material_background = "medium"
+vim.o.background = "light"
+vim.g.gruvbox_material_background = "soft"
 vim.g.gruvbox_material_better_performance = 1
 
 vim.g.mapleader = " "
