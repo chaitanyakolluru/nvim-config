@@ -1,5 +1,5 @@
 local Plugin = {
-  "neanias/everforest-nvim",
+  "sainnhe/everforest",
   lazy = false,
   priority = 1000,
   opts = {},
