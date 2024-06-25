@@ -36,7 +36,7 @@ function Plugin.config()
     routes = {
     {
       view = "split",
-      filter = { event = "msg_show", min_height = 5 },
+      filter = { event = "msg_show", min_height = 20 },
     },
   },
   })
