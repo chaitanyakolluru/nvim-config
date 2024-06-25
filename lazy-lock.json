@@ -8,7 +8,7 @@
   "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
   "friendly-snippets": { "branch": "main", "commit": "682157939e57bd6a2c86277dfd4d6fbfce63dbac" },
   "gruvbox-material": { "branch": "master", "commit": "607fac66a5a4418dd9fe1c8fe7d1368099f5bf96" },
-  "harpoon": { "branch": "harpoon2", "commit": "0378a6c428a0bed6a2781d459d7943843f374bce" },
+  "harpoon": { "branch": "master", "commit": "ccae1b9bec717ae284906b0bf83d720e59d12b91" },
   "lazy.nvim": { "branch": "main", "commit": "69041bccb70f68408633e93ed33012ee18889bb0" },
   "markdown-preview.nvim": { "branch": "master", "commit": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "37a336b653f8594df75c827ed589f1c91d91ff6c" },

@@ -4,11 +4,6 @@ local Plugin = { 'theprimeagen/harpoon' }
 Plugin.ft = { "go", "json", "yaml", "protofuf", "lua", "helm", "markdown", "python", "rust", "text", "docker", "html",
   "terraform", "typescript" }
 
-Plugin.branch = "harpoon2"
-Plugin.dependencies = {
-  { 'nvim-lua/plenary.nvim' },
-}
-
 function Plugin.config()
   local mark = require("harpoon.mark")
   local ui = require("harpoon.ui")
