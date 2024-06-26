@@ -25,7 +25,7 @@ Plugin.keys = {
   --  -- neovim lsp pickers
   { 'gr', ':Telescope lsp_references<CR>', desc = "[G]oto [R]eferences" },
   { '<leader>ds', ':Telescope lsp_document_symbols<CR>', desc = "[D]ocument [S]ymbols" },
-  { '<leader>ws', ':Telescope lsp_workspace_symbols<CR>', desc = "[W]orkspace [S]ymbols" },
+  { '<leader>ws', ':Telescope lsp_dynamic_workspace_symbols<CR>', desc = "[W]orkspace [S]ymbols" },
   { '<leader>sd', ':Telescope diagnostics<CR>', desc = "[S]earch [D]iagnostics" },
 }
 
