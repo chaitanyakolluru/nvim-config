@@ -23,3 +23,6 @@ vim.g.gruvbox_material_background = "soft"
 vim.g.gruvbox_material_better_performance = 1
 
 vim.g.mapleader = " "
+
+-- setting conceallevel for obsidian
+vim.opt.conceallevel = 1
