@@ -15,6 +15,9 @@ Plugin.keys = {
 }
 
 function Plugin.config()
+  -- noice filter messages inside telescope
+  require("telescope").load_extension("noice")
+
   require("noice").setup({
     lsp = {
       override = {
@@ -34,11 +37,11 @@ function Plugin.config()
       lsp_doc_border = false,       -- add a border to hover docs and signature help
     },
     routes = {
-    {
-      view = "split",
-      filter = { event = "msg_show", min_height = 20 },
+      {
+        view = "split",
+        filter = { event = "msg_show", min_height = 20 },
+      },
     },
-  },
   })
 end
 
