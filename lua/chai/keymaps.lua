@@ -15,8 +15,6 @@ vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste and Delete from regis
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank selected text into system clipboard" })
 vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank from cursor to end of line into system clipboard" })
 
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Quiet Delete" })
-
 vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format, { desc = "[F]ormat [F]ile" })
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz", { desc = "Navigate Up on Compiler Errors" })
