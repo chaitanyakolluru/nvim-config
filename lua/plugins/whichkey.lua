@@ -1,11 +1,24 @@
-local Plugin = { 'folke/which-key.nvim' }
+local Plugin = {
+  "folke/which-key.nvim",
+  event = "VeryLazy",
+  opts = {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  },
+  dependencies = {
+    { 'echasnovski/mini.icons', version = false },
+  },
 
--- Plugin.cmd = { 'WhichKey' }
-
-function Plugin.config()
-  vim.o.timeout = true
-  vim.o.timeoutlen = 300
-  require("which-key").setup {}
-end
+  keys = {
+    {
+      "<leader>?",
+      function()
+        require("which-key").show({ global = false })
+      end,
+      desc = "Buffer Local Keymaps (which-key)",
+    },
+  },
+}
 
 return Plugin
