@@ -1,5 +1,5 @@
 local lspconfig = require("lspconfig")
-lspconfig.gopls.setup({
+lspconfig.gopls.setup{
   settings = {
     gopls = {
       analyses = {
@@ -9,4 +9,4 @@ lspconfig.gopls.setup({
       gofumpt = true,
     },
   },
-})
+}
