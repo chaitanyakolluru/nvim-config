@@ -3,6 +3,7 @@ local Plugins = {
   { "christoomey/vim-tmux-navigator" },
   { 'BurntSushi/ripgrep' },
   { 'nvim-tree/nvim-web-devicons' },
+  { 'github/copilot.vim' },
 }
 
 return Plugins
